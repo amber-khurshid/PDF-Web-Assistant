@@ -3,3 +3,7 @@
 requirements.txt
 
 __pycache__
+Dockerfile
+
+.gradio
+tempCodeRunnerFile.py
