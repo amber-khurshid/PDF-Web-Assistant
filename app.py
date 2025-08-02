@@ -230,7 +230,7 @@ def main():
         chat_interface = ChatInterface()
         interface = chat_interface.create_interface()
         logger.info("Gradio interface launched successfully")
-        interface.launch()
+        interface.launch(share=True)
         # logger.info("Gradio interface launched successfully")
     except Exception as e:
         logger.error(f"Application startup error: {e}", exc_info=True)
