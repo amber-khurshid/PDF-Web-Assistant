@@ -11,7 +11,7 @@ from history import ChatHistoryStorage
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class NetSolChatInterface:
+class ChatInterface:
     def __init__(self):
         self.pipeline = RAGPipeline(DocumentProcessor(), ChatHistoryStorage())
         self.document_processor = self.pipeline.document_processor
@@ -172,7 +172,7 @@ class NetSolChatInterface:
     
     def create_interface(self):
         with gr.Blocks(
-            title="NetSol Financial Assistant",
+            title="PDF Web Assistant",
             theme=gr.themes.Soft(),
             css="""
             .gradio-container { max-width: 1200px !important; }
@@ -195,7 +195,7 @@ class NetSolChatInterface:
                 with gr.Column(scale=2):
                     chatbot = gr.Chatbot(label="💬 Chat", height=400, type='messages')
                     with gr.Row():
-                        msg_textbox = gr.Textbox(label="Your Question", placeholder="Ask about NetSol financials...", lines=2, scale=4)
+                        msg_textbox = gr.Textbox(label="Your Question", placeholder=" ", lines=2, scale=4)
                         send_btn = gr.Button("Send 📤", variant="primary", scale=1)
                     with gr.Row():
                         clear_btn = gr.Button("Clear Chat 🗑️")
@@ -227,7 +227,7 @@ class NetSolChatInterface:
 
 def main():
     try:
-        chat_interface = NetSolChatInterface()
+        chat_interface = ChatInterface()
         interface = chat_interface.create_interface()
         logger.info("Gradio interface launched successfully")
         interface.launch()

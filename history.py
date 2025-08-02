@@ -57,7 +57,7 @@ class DatabaseManager:
     
     def get_collection(self, collection_name: str):
         try:
-            db = self.client["netsol_chat_db"]
+            db = self.client["chat_db"]
             collection = db[collection_name]
             
             if collection_name == "chat_history":
