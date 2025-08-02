@@ -1,3 +1,9 @@
+---
+title: Document-Web-Assistant
+app_file: app.py
+sdk: gradio
+sdk_version: 5.38.2
+---
 **PDF Web Assistant**
 
 A Retrieval-Augmented Generation (RAG) powered assistant designed to provide accurate and comprehensive answers by processing uploaded PDF documents and supplementing with web searches when necessary. Built with a modern tech stack including LangGraph, LangChain, FAISS, MongoDB, and Gradio for an intuitive user interface.
