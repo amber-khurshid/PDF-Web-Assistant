@@ -1,5 +1,5 @@
-**PDF Web Assistant
-**
+**PDF Web Assistant**
+
 A Retrieval-Augmented Generation (RAG) powered assistant designed to provide accurate and comprehensive answers by processing uploaded PDF documents and supplementing with web searches when necessary. Built with a modern tech stack including LangGraph, LangChain, FAISS, MongoDB, and Gradio for an intuitive user interface.
 
 **Features**
