@@ -1,7 +1,9 @@
 import os
 import logging
 from dotenv import load_dotenv
-from langchain_community.tools.tavily_search import TavilySearchResults
+# from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch
+
 from langchain_core.tools import tool
 
 # Set up logging
@@ -16,7 +18,7 @@ if not tavily_api_key:
     raise ValueError("TAVILY_API_KEY not found")
 
 # Initialize Tavily tool
-tavily_tool = TavilySearchResults(
+tavily_tool = TavilySearch(
     api_key=tavily_api_key,
     max_results=5,
     search_depth="advanced"
