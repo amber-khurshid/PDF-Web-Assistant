@@ -237,4 +237,6 @@ Otherwise, proceed with the standard retrieval process using the PDF or web sear
             error_message = f"Sorry, I encountered an error while processing your query: {str(e)}"
             self.chat_storage.save_message(thread_id, user_query, "user")
             self.chat_storage.save_message(thread_id, error_message, "assistant")
+
+            
             return error_message
